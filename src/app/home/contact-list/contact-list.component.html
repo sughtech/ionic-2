@@ -1,0 +1,25 @@
+
+    <ng-container *ngIf="contacts; else elseTemplate">
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      <ion-list>
+        <ion-item *ngFor="let contact of contacts">
+          <ion-avatar slot="start">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/daykiine/128.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{contact.name}}</h2>
+            <h3>{{contact.phone}}</h3>
+            <p>{{contact.address}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="loading">
+        <ion-spinner name="crescent"></ion-spinner>
+        <p>Loading Contacts</p>
+      </div>
+    </ng-template>
+  

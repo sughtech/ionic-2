@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item>
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input id="name" [(ngModel)]="contact.name" placeholder="John Doe"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Phone Number</ion-label>
+    <ion-input id="phone" [(ngModel)]="contact.phone" placeholder="+234 813 000 0000"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Home Address</ion-label>
+    <ion-input id="address" [(ngModel)]="contact.address" placeholder="224 Malcom Way"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="addContact()">Add Contact</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="'/home'">
+      <ion-icon name="return-down-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
