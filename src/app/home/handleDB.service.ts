@@ -33,9 +33,9 @@ export class HandleDBService {
     });
   }
 
-  async fetchContacts(): Promise<Contact[]> {
+  fetchContacts(): Promise<Contact[]> {
     const config = {};
-    return await this.apiReq(config).then((res) => {
+    return this.apiReq(config).then((res) => {
     return res.json();
     }).then(value => {
         return Object.values(value);
