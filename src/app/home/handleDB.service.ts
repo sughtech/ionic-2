@@ -13,12 +13,12 @@ export class HandleDBService {
     return fetch(this.endpoint, config);
   }
 
-  async addContact(contact: Contact) {
+  addContact(contact: Contact) {
     const config: RequestInit = {
       method: "POST",
       body: JSON.stringify(contact),
     };
-    return await (await this.apiReq(config)).json();
+    return this.apiReq(config).then(res => res.json());
   }
 
   test() {
