@@ -23,12 +23,11 @@ export class AddNewPage {
     });
   }
 
-  async showToast() {
+  showToast() {
     console.log('Added Successfully!');
-    const toast = await this.toastController.create({
+    this.toastController.create({
       message: 'Contact Added Successfully!',
       duration: 2000
-    });
-    toast.present();
+    }).then(toast => toast.present());
   }
 }
