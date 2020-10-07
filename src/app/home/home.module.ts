@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { AddNewPage } from './add-new/add-new.page';
 
 
 @NgModule({
@@ -15,6 +16,6 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, ContactListComponent]
+  declarations: [HomePage, ContactListComponent, AddNewPage]
 })
 export class HomePageModule {}

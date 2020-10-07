@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
+import { AddNewPage } from './add-new/add-new.page';
 
 const routes: Routes = [
   {
@@ -9,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'add-new',
-    loadChildren: () => import('./add-new/add-new.module').then( m => m.AddNewPageModule)
+    component: AddNewPage
   }
 ];
 
